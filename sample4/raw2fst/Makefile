@@ -1,3 +1,6 @@
+# flcli -v 1d50:602b:0003 -l 0:sample4.dat
+# make waves SIGS="TCK TDO TDI TMS"
+
 SIGS := SS SCK MOSI MISO
 
 all: raw2fst
