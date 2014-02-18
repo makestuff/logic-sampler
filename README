@@ -1,0 +1,9 @@
+Simple logic analyser.
+
+cd sample4/vhdl
+hdlmake.py -t ../templates/fx2min/vhdl -b lx9 -p fpga
+flcli -i 04b4:8613 -v 1d50:602b:0003 -p J:A7A0A3A1:fpga.xsvf
+cd ../raw2fst
+make
+flcli -v 1d50:602b:0003 -l 0:sample4.dat
+make waves SIGS="TCK TDO TDI TMS"
